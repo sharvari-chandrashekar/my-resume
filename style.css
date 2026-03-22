@@ -1,27 +1,27 @@
-/* 1. CSS Selectors (Element Selector) and Box Model Reset */
+/* --- Global Reset & Box Model --- */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    box-sizing: border-box; 
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Font improvement */
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #f4f7f6;
 }
 
-/* 2. Navigation Bar (Positioning & Flexbox) */
+/* --- Navigation (Flexbox & Sticky Positioning) --- */
 .navbar {
-    display: flex; /* Flexbox Layout */
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 10%;
-    background-color: #2d3436; /* Consistent Color Palette */
-    color: white;
-    position: sticky; /* Positioning Property */
+    background-color: #ffffff;
+    position: sticky; 
     top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 1000;
 }
 
@@ -31,70 +31,82 @@ body {
 }
 
 .nav-links li {
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 .nav-links a {
-    color: white;
     text-decoration: none;
+    color: #333;
     font-weight: bold;
 }
 
-/* 3. Hero Section (Alignment & Spacing) */
+/* --- Hero/Header Section Styling --- */
 .hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #6c5ce7, #a29bfe); /* Modern Visual Appeal */
+    background-color: #1a1a1a;
     color: white;
+    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the pic and text */
+}
+
+/* Photo Styling (Box Model Application) */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;   /* Makes image a circle */
+    object-fit: cover;
+    border: 4px solid #0077b5; 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .highlight {
-    color: #ffeaa7;
+    color: #0077b5;
 }
 
-/* 4. Container & Sections (Box Model: Margins/Padding) */
+/* --- Layout (Box Model Cards) --- */
 .container {
-    max-width: 1000px;
-    margin: 0 auto; /* Centering the layout */
-    padding: 40px 20px;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
 }
 
-.section {
-    margin-bottom: 50px;
+.section-card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 h2 {
-    border-bottom: 3px solid #6c5ce7;
-    display: inline-block;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
+    color: #1a1a1a;
+    border-left: 5px solid #0077b5;
+    padding-left: 15px;
+    margin-bottom: 15px;
 }
 
-/* 5. Feature Cards (Flexbox/Grid & Class Selectors) */
-.skills-grid {
+/* --- Flexbox Skills --- */
+.skills-flex {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Makes it responsive */
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.skill-card {
-    background: white;
-    flex: 1; /* Distributes space evenly */
-    min-width: 250px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Visual depth */
-    transition: transform 0.3s ease;
+.skill-tag {
+    background: #eef3f8;
+    color: #0077b5;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
 }
 
-.skill-card:hover {
-    transform: translateY(-5px); /* Interaction detail */
-}
-
-/* 6. Footer */
 .footer {
     text-align: center;
     padding: 40px;
-    background-color: #dfe6e9;
-    font-size: 0.9rem;
+    background: #1a1a1a;
+    color: white;
 }
