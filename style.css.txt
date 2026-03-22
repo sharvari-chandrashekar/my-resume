@@ -1,0 +1,100 @@
+/* 1. CSS Selectors (Element Selector) and Box Model Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Font improvement */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* 2. Navigation Bar (Positioning & Flexbox) */
+.navbar {
+    display: flex; /* Flexbox Layout */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    background-color: #2d3436; /* Consistent Color Palette */
+    color: white;
+    position: sticky; /* Positioning Property */
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 3. Hero Section (Alignment & Spacing) */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe); /* Modern Visual Appeal */
+    color: white;
+}
+
+.highlight {
+    color: #ffeaa7;
+}
+
+/* 4. Container & Sections (Box Model: Margins/Padding) */
+.container {
+    max-width: 1000px;
+    margin: 0 auto; /* Centering the layout */
+    padding: 40px 20px;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    border-bottom: 3px solid #6c5ce7;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+/* 5. Feature Cards (Flexbox/Grid & Class Selectors) */
+.skills-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Makes it responsive */
+}
+
+.skill-card {
+    background: white;
+    flex: 1; /* Distributes space evenly */
+    min-width: 250px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Visual depth */
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Interaction detail */
+}
+
+/* 6. Footer */
+.footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #dfe6e9;
+    font-size: 0.9rem;
+}
